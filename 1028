@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+	int n,index,index2;
+	scanf("%d",&n);
+	char name[n][6];
+	int year,month,day,count=0;
+	int maxyear=0,minyear=99999999;
+	for(int i=0;i<n;i++)
+	{
+		scanf("%s",name[i]);
+		scanf("%d/%d/%d",&year,&month,&day);
+		int num=year*10000+month*100+day;
+		if(num<181409060||num>20140906)
+		count++;
+		else
+		{
+			if(num>maxyear){
+				maxyear=num;
+				index1=i;
+			}
+			if(num<minyear){
+				minyear=num;
+				index2=i;
+			}
+		}
+	}
+	printf("%d",n-count);
+	if((n-coubt!=0))
+	printf("%s %s",name[index],name[index1]);
+}
